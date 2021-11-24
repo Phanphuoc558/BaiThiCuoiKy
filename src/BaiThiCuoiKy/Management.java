@@ -9,6 +9,7 @@ public class Management {
     float totalPrice;
     
     public Management() {
+
     }
     private boolean isEmpty(){
         boolean empty = true;
@@ -35,8 +36,8 @@ public class Management {
             System.out.println("Danh sách trống! ");
         } else {
             System.out.println("================================================================================");
-            System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-            System.out.println("|==================|================|================|=============|===========|");
+            System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+            System.out.println("|========================|============|==============|=============|===========|");
             Node temp = head;
             while(temp!=null){
                 temp.data.print();
@@ -118,8 +119,8 @@ public class Management {
         int type = Integer.parseInt(InputTools.inputString());
         System.out.println("Kết quả của bạn: ");
         System.out.println("================================================================================");
-        System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-        System.out.println("|==================|================|================|=============|===========|");
+        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         if(type>0 && type <4){
             while(temp!=null){
@@ -147,8 +148,8 @@ public class Management {
         float hight = Float.parseFloat(InputTools.inputString());
         System.out.println("Kết quả của bạn: ");
         System.out.println("================================================================================");
-        System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-        System.out.println("|==================|================|================|=============|===========|");
+        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         while(temp!=null){
             if(temp.data.getImportPrice() >= under && temp.data.getImportPrice() <= hight){
@@ -168,8 +169,8 @@ public class Management {
         Creen.clear();
         System.out.println("Kết quả của bạn: ");
         System.out.println("================================================================================");
-        System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-        System.out.println("|==================|================|================|=============|===========|");
+        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         while(temp!=null){
             if(temp.data.getInputDate().after(fromDate) && temp.data.getInputDate().before(toDate)){
@@ -207,8 +208,8 @@ public class Management {
         }
         System.out.println("Kết quả của bạn: Hàng hóa được sắp xếp theo thứ tự :Thực phẩm - Điện máy - Đồ sứ");
         System.out.println("================================================================================");
-        System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-        System.out.println("|==================|================|================|=============|===========|");
+        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|========================|============|==============|=============|===========|");
         for(Node i=head;i!=null;i=i.next){
             if(i.data instanceof Food)
                 i.data.print();
@@ -250,8 +251,8 @@ public class Management {
         }
         System.out.println("Kết quả của bạn: Hàng hóa được sắp xếp theo thứ tự :Thực phẩm - Điện máy - Đồ sứ");
         System.out.println("================================================================================");
-        System.out.println("|     Tên hàng     |    Mã hàng     |    Giá nhập    |   Tồn kho   | Ngày nhập |");
-        System.out.println("|==================|================|================|=============|===========|");
+        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|========================|============|==============|=============|===========|");
         for(Node i=head;i!=null;i=i.next){
             if(i.data instanceof Food)
                 i.data.print();

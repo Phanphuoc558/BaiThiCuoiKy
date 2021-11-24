@@ -43,6 +43,6 @@ public abstract class HangHoa {
         this.inputDate = inputDate;
     }
     public void print(){
-        System.out.printf("|%18s|%16s|%14.2f $|%13d|%11s|\n",this.getName(),this.getId(),this.getImportPrice(),this.getInventoryNumber(),FormatDate.dateToString(this.getInputDate()));
+        System.out.printf("|%24s|%12s|%12.2f $|%13d|%11s|\n",this.getName(),this.getId(),this.getImportPrice(),this.getInventoryNumber(),FormatDate.dateToString(this.getInputDate()));
     }
 }
