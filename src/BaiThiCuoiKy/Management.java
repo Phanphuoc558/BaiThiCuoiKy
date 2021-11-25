@@ -162,9 +162,9 @@ public class Management {
     }
     public void searchDate() throws ParseException{
         System.out.println("Mời bạn nhập khoảng thời gian cần tìm! ");
-        System.out.print("Sau ngày (dd/mm/yyyy): ");
+        System.out.print("Từ ngày (dd/mm/yyyy): ");
         Date fromDate = FormatDate.stringToDate(InputTools.inputString());
-        System.out.print("Đến trước ngày (dd/mm/yyyy): ");
+        System.out.print("Đến ngày (dd/mm/yyyy): ");
         Date toDate = FormatDate.stringToDate(InputTools.inputString());
         Creen.clear();
         System.out.println("Kết quả của bạn: ");
@@ -173,7 +173,7 @@ public class Management {
         System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         while(temp!=null){
-            if(temp.data.getInputDate().after(fromDate) && temp.data.getInputDate().before(toDate)){
+            if(CompareDate.compare(fromDate, temp.data.getInputDate())==1 && CompareDate.compare(temp.data.getInputDate(), toDate)==1){
                 temp.data.print();
             }
             temp = temp.next;
@@ -228,21 +228,7 @@ public class Management {
     public void sortLatest(){
         for(Node i=head;i!=null;i=i.next){
             for(Node j=i;j!=null;j=j.next){
-                String date1 = FormatDate.dateToString(i.data.getInputDate());
-                String d1[] = date1.split("/");
-                int nam1 = Integer.parseInt(d1[2]);
-                int thang1 = Integer.parseInt(d1[1]);
-                int ngay1 = Integer.parseInt(d1[0]);
-                String date2 = FormatDate.dateToString(j.data.getInputDate());
-                String d2[] = date2.split("/");
-                int nam2 = Integer.parseInt(d2[2]);
-                int thang2 = Integer.parseInt(d2[1]);
-                int ngay2 = Integer.parseInt(d2[0]);
-                boolean result = false;
-                if(nam2>nam1 || nam2==nam1 && thang2>thang1|| nam2==nam1 && thang2==thang1 && ngay2>ngay1)
-                    result = true;
-                else result = false;
-                if(result==true){
+                if(CompareDate.compare(i.data.getInputDate(), j.data.getInputDate())==1){
                     HangHoa temp = i.data;
                     i.data = j.data;
                     j.data = temp;
