@@ -67,9 +67,9 @@ public class MainProgram {
                     switch(choseSearch){
                         case 1:list.searchType();break;
                         case 2:list.searchPrice();break;
-                        case 3:list.searchDate();
+                        case 3:list.searchDate();break;
                     }
-                }while(choseSearch>0 && choseSearch<4);
+                }while(choseSearch>0 && choseSearch<4);break;
                 case 3:{
                     Menu.menuSort();
                     System.out.print("Lựa chọn của bạn: ");
@@ -77,7 +77,7 @@ public class MainProgram {
                     Creen.clear();
                     switch(choseSort){
                         case 1:list.sortUpPrice();break;
-                        case 2:list.sortLatest();
+                        case 2:list.sortLatest();break;
                     }
                 };break;
                 case 4:list.show();break;
