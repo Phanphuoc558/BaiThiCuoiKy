@@ -33,10 +33,10 @@ public class Management {
     }
     public void show(){
         if(head==null){
-            System.out.println("Danh sách trống! ");
+            System.out.println("Danh sách trong! ");
         } else {
             System.out.println("================================================================================");
-            System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+            System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
             System.out.println("|========================|============|==============|=============|===========|");
             Node temp = head;
             while(temp!=null){
@@ -50,14 +50,14 @@ public class Management {
     public void editHangHoa()throws ParseException{
         Node temp = head;
         boolean result = false;
-        System.out.print("Mời bạn nhập vào id hàng hóa cần sửa: ");
+        System.out.print("Moi ban nhap vao id hang hoa can sua: ");
         String value = InputTools.inputString();
         Creen.clear();
         while(temp!=null){
             if(temp.data.getId().equalsIgnoreCase(value)){
                 result = true;
                 Menu.menuObjectEdit();
-                System.out.print("Lựa chọn của bạn: ");
+                System.out.print("Lua chon cua ban: ");
                 int choseEdit = Integer.parseInt(InputTools.inputString());
                 Creen.clear();
                 if(choseEdit==1){
@@ -69,18 +69,18 @@ public class Management {
                     SetTing.settingInventoryNumber(temp.data);
                 else if(choseEdit==4)
                     SetTing.settingDate(temp.data);
-                else System.out.println("Bạn chọn sai!");
+                else System.out.println("Ban chon sai!");
             }
             temp = temp.next;
         }
         if(result==false){
-            System.out.println("Không tìm thấy id bạn nhập! <3");
+            System.out.println("Khong tim thay id ban nhap! <3");
             Creen.clearEnter();
         }
     }
     public void deleteHangHoa(){
         boolean result = false;
-        System.out.print("Mời bạn nhập vào id hàng hóa cần xóa: ");
+        System.out.print("Moi ban nhap vao id hang hoa can xoa: ");
         String value = InputTools.inputString();
         Creen.clear();
         Node i = head;
@@ -106,20 +106,20 @@ public class Management {
                     else if(txt[0].equalsIgnoreCase("EC"))
                         Electric.count--;
             }else {
-                System.out.println("Không tìm thấy id để xóa");
+                System.out.println("Khong tim thay id đe xoa");
                 Creen.clearEnter();
             }
         }else{
-            System.out.println("Danh sách hàng hóa đang trống!");
+            System.out.println("Danh sach hang hoa dang trong!");
             Creen.clearEnter();
         }
     }
     public void searchType(){
         Menu.menuHangHoa();
         int type = Integer.parseInt(InputTools.inputString());
-        System.out.println("Kết quả của bạn: ");
+        System.out.println("Ket qua cua ban: ");
         System.out.println("================================================================================");
-        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
         System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         if(type>0 && type <4){
@@ -141,14 +141,14 @@ public class Management {
         Creen.clearEnter();
     }
     public void searchPrice(){
-        System.out.println("Mời bạn nhập khoảng giá tìm kiếm!");
-        System.out.print("Từ: ");
+        System.out.println("Moi ban nhap khoang gia tim kiem!");
+        System.out.print("Tu: ");
         float under = Float.parseFloat(InputTools.inputString());
-        System.out.print("Đến: ");
+        System.out.print("Đen: ");
         float hight = Float.parseFloat(InputTools.inputString());
-        System.out.println("Kết quả của bạn: ");
+        System.out.println("Ket qua cua ban: ");
         System.out.println("================================================================================");
-        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
         System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         while(temp!=null){
@@ -161,15 +161,15 @@ public class Management {
         Creen.clearEnter();
     }
     public void searchDate() throws ParseException{
-        System.out.println("Mời bạn nhập khoảng thời gian cần tìm! ");
-        System.out.print("Từ ngày (dd/mm/yyyy): ");
+        System.out.println("Moi ban nhap khoang thoi gian can tim! ");
+        System.out.print("Tu ngay (dd/mm/yyyy): ");
         Date fromDate = FormatDate.stringToDate(InputTools.inputString());
-        System.out.print("Đến ngày (dd/mm/yyyy): ");
+        System.out.print("Đen ngay (dd/mm/yyyy): ");
         Date toDate = FormatDate.stringToDate(InputTools.inputString());
         Creen.clear();
-        System.out.println("Kết quả của bạn: ");
+        System.out.println("Ket qua cua ban: ");
         System.out.println("================================================================================");
-        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
         System.out.println("|========================|============|==============|=============|===========|");
         Node temp = head;
         while(temp!=null){
@@ -183,16 +183,16 @@ public class Management {
     }
     public void statitic(){
         System.out.println("==============================================");
-        System.out.println("|Tổng số lượng hàng hóa: "+(Food.count+Electric.count+Ceramic.count));
-        System.out.println("|Số hàng hóa loại thực phẩm: "+Food.count);
-        System.out.println("|Số hàng hóa loại điện máy: "+Electric.count);
-        System.out.println("|Số hàng hóa loại sành sứ: "+Ceramic.count);
+        System.out.println("|Tong so luong hang hoa: "+(Food.count+Electric.count+Ceramic.count));
+        System.out.println("|So hang hoa loai thuc pham: "+Food.count);
+        System.out.println("|So hang hoa loai dien may: "+Electric.count);
+        System.out.println("|So hang hoa loai sanh su: "+Ceramic.count);
         Node temp = head;
         while(temp!=null){
             totalPrice = totalPrice + temp.data.getImportPrice()*temp.data.getInventoryNumber();
             temp = temp.next;
         }
-        System.out.println("|Tổng giá trị nhập kho: "+(Float)totalPrice+" $");
+        System.out.println("|Tong gia tri nhap kho: "+(Float)totalPrice+" $");
         System.out.println("==============================================");
         Creen.clearEnter();
     }
@@ -206,7 +206,7 @@ public class Management {
                 }
             }
         }
-        System.out.println("Kết quả của bạn: Hàng hóa được sắp xếp theo thứ tự :Thực phẩm - Điện máy - Đồ sứ");
+        System.out.println("Ket qua cua ban: Hang hoa duoc sap xep theo thu tu :Thuc pham - Dien may - Do su");
         System.out.println("================================================================================");
         System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
         System.out.println("|========================|============|==============|=============|===========|");
@@ -235,7 +235,7 @@ public class Management {
                 }
             }
         }
-        System.out.println("Kết quả của bạn: Hàng hóa được sắp xếp theo thứ tự :Thực phẩm - Điện máy - Đồ sứ");
+        System.out.println("Ket qua cua ban: Hang hoa duoc sap xep theo thu tu :Thuc pham - Dien may - Do su");
         System.out.println("================================================================================");
         System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
         System.out.println("|========================|============|==============|=============|===========|");
