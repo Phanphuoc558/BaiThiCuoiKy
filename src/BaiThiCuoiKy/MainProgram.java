@@ -29,19 +29,19 @@ public class MainProgram {
         list.add(new Electric("IPHONE 12", "EC-4", (float) 1000, 13, FormatDate.stringToDate("15/10/2021")));
         do{
             Menu.menuMain();
-            System.out.print("Mời bạn nhập lựa chọn: ");
+            System.out.print("Moi ban nhap lua chon: ");
             chose = Integer.parseInt(InputTools.inputString());
             Creen.clear();
             switch(chose){
                 case 1:do{
                     Menu.menuEdit();
-                    System.out.print("Mời bạn nhập lựa chọn: ");
+                    System.out.print("Moi ban nhap lua chon: ");
                     choseEdit = Integer.parseInt(InputTools.inputString());
                     Creen.clear();
                     switch(choseEdit){
                         case 1:{
                             Menu.menuHangHoa();
-                            System.out.print("Mời bạn nhập lựa chọn: ");
+                            System.out.print("Moi ban nhap lua chon: ");
                             choseHang = Integer.parseInt(InputTools.inputString());
                             Creen.clear();
                             if(choseHang==1){
@@ -51,7 +51,7 @@ public class MainProgram {
                             }else if(choseHang==3){
                                list.add(InputTools.inpCeramic());
                             }else{
-                                System.out.println("Bạn chọn sai! ");
+                                System.out.println("Ban chon sai! ");
                                 Creen.clear();
                             }
                         };break;
@@ -61,7 +61,7 @@ public class MainProgram {
                 }while(choseEdit>0 && choseEdit<4);break;
                 case 2:do{
                     Menu.menuSearch();
-                    System.out.print("Mời bạn nhập lựa chọn: ");
+                    System.out.print("Moi ban nhap lua chon: ");
                     choseSearch = Integer.parseInt(InputTools.inputString());
                     Creen.clear();
                     switch(choseSearch){
@@ -72,7 +72,7 @@ public class MainProgram {
                 }while(choseSearch>0 && choseSearch<4);break;
                 case 3:{
                     Menu.menuSort();
-                    System.out.print("Lựa chọn của bạn: ");
+                    System.out.print("Lua chon cua ban: ");
                     choseSort = Integer.parseInt(InputTools.inputString());
                     Creen.clear();
                     switch(choseSort){

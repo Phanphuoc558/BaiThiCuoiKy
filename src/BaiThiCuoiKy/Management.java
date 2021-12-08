@@ -70,6 +70,7 @@ public class Management {
                 else if(choseEdit==4)
                     SetTing.settingDate(temp.data);
                 else System.out.println("Ban chon sai!");
+                break;
             }
             temp = temp.next;
         }
