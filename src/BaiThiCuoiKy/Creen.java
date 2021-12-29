@@ -2,7 +2,7 @@ package BaiThiCuoiKy;
 
 public class Creen {
     static public void clearEnter(){
-        System.out.println("Enter để tiếp tục! <3");
+        System.out.println("Enter de tiep tuc! <3");
         String x = InputTools.inputString();
         try{
             new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();

@@ -145,7 +145,7 @@ public class Management {
         System.out.println("Moi ban nhap khoang gia tim kiem!");
         System.out.print("Tu: ");
         float under = Float.parseFloat(InputTools.inputString());
-        System.out.print("Đen: ");
+        System.out.print("Den: ");
         float hight = Float.parseFloat(InputTools.inputString());
         System.out.println("Ket qua cua ban: ");
         System.out.println("================================================================================");
@@ -165,7 +165,7 @@ public class Management {
         System.out.println("Moi ban nhap khoang thoi gian can tim! ");
         System.out.print("Tu ngay (dd/mm/yyyy): ");
         Date fromDate = FormatDate.stringToDate(InputTools.inputString());
-        System.out.print("Đen ngay (dd/mm/yyyy): ");
+        System.out.print("Den ngay (dd/mm/yyyy): ");
         Date toDate = FormatDate.stringToDate(InputTools.inputString());
         Creen.clear();
         System.out.println("Ket qua cua ban: ");
@@ -209,7 +209,7 @@ public class Management {
         }
         System.out.println("Ket qua cua ban: Hang hoa duoc sap xep theo thu tu :Thuc pham - Dien may - Do su");
         System.out.println("================================================================================");
-        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
         System.out.println("|========================|============|==============|=============|===========|");
         for(Node i=head;i!=null;i=i.next){
             if(i.data instanceof Food)
@@ -238,7 +238,7 @@ public class Management {
         }
         System.out.println("Ket qua cua ban: Hang hoa duoc sap xep theo thu tu :Thuc pham - Dien may - Do su");
         System.out.println("================================================================================");
-        System.out.println("|        Tên hàng        |  Mã hàng   |   Giá nhập   |   Tồn kho   | Ngày nhập |");
+        System.out.println("|        Ten hang        |  Ma hang   |   Gia nhap   |   Ton kho   | Ngay nhap |");
         System.out.println("|========================|============|==============|=============|===========|");
         for(Node i=head;i!=null;i=i.next){
             if(i.data instanceof Food)

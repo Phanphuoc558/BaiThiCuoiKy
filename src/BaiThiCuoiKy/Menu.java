@@ -9,7 +9,7 @@ public class Menu {
         System.out.println("| 3.Sap xep                   |");
         System.out.println("| 4.Tat ca hang hoa           |");
         System.out.println("| 5.Thong ke                  |");
-        System.out.println("| M0t so khac bat ki đe thoat |");
+        System.out.println("| Mot so khac bat ki de thoat |");
         System.out.println("===============================");
     }
     public static void menuEdit(){
@@ -18,7 +18,7 @@ public class Menu {
         System.out.println("| 1.Them                      |");
         System.out.println("| 2.Sua                       |");
         System.out.println("| 3.Xoa                       |");
-        System.out.println("| Mot so khac bat ki đe thoat |");
+        System.out.println("| Mot so khac bat ki de thoat |");
         System.out.println("===============================");
     }
     public static void menuSearch(){
@@ -27,7 +27,7 @@ public class Menu {
         System.out.println("| 1.Tim theo loai             |");
         System.out.println("| 2.Tim theo gia              |");
         System.out.println("| 3.Tim theo ngay nhap        |");
-        System.out.println("| Mot so khac bat ki đe thoat |");
+        System.out.println("| Mot so khac bat ki de thoat |");
         System.out.println("===============================");
     }
     public static void menuSort(){
@@ -36,13 +36,13 @@ public class Menu {
         System.out.println("===============================");
         System.out.println("| 1.Theo gia nhap             |");
         System.out.println("| 2.Theo ngay nhap            |");
-        System.out.println("| Mot so khac bat ki đe thoat |");
+        System.out.println("| Mot so khac bat ki de thoat |");
         System.out.println("===============================");
     }
     public static void menuHangHoa(){
         System.out.println("Chon hang hoa thao tac");
         System.out.println("1. Thuc pham");
-        System.out.println("2. Đien may");
+        System.out.println("2. Dien may");
         System.out.println("3. Sanh su");
     }
     public static void menuObjectEdit(){
